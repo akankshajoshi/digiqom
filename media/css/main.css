@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+  margin: 0;
+  font-family: Helvetica, Arial;
+  font-size: 12px;
+
+  color: #000000;
+  background-color: #e7ebf2; padding:0; 
+}
+* { list-style:none; padding:0; margin:0;}
+a, a:hover {
+  color: #ec624d;
+  text-decoration: none;
+		outline: none !important;
+}
+a img{border:0}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+a:focus {
+  outline: none;
+  outline: none;
+  outline-offset:none;
+}
+header { width:1000px; margin:0 auto; }
+header .logo { float:left; background:url(/media/image/home/sprite.png) -18px -2px no-repeat; width:599px; height:98px; }
+header .logo a {width:599px; height:98px; display:block;}
+
+header .right { float:right; width:152px; margin:18PX 0 0 0;}
+header .share { width:168px; background:url(/media/image/home/sprite.png) -10px -178px no-repeat; height:25px; color:#6584df; margin:0 0 17PX 0; }
+header .share em { padding:8px 5px 0 5px; font-style:normal; float:left;}
+header .share a{ float:left; width:18PX; height:18PX; margin:5px 4px 0 0;}
+
+header .logoright { float:right; width:140px; height:41px; background:url(/media/image/home/sprite.png) -10px -119px no-repeat;}
+header .logoright a { width:140px; height:41px; display:block;}
+
+header nav { background:#2e4f85; border:solid 1px #252627; font:normal 13px Arial, Helvetica, sans-serif; color:#fff; float:left; width:100%; border-radius:5px;margin:0 0 20px 0;}
+
+header nav ul, header nav ul li { float:left; }
+header nav ul li { padding:3px 12px; text-shadow:1px 1px 1px #012054; border-right:solid 1px #243e69; margin:5px 0;}
+header nav ul li a { color:#fff;}
+header nav ul li a:hover { color:#fff;}
+header nav ul li.home { width:19px; height:13px; background:url(media/images/home/sprite.png) -177px -150px no-repeat; margin:7px 0 0 0;}
+header nav ul li.home a {width:19px; height:13px; display:block;}
+.homemid {width:1000px; margin:0 auto; clear:both; }
+.topmid { background:#000000; font: normal 24px Arial, Helvetica, sans-serif; color:#fff; box-shadow: 1px 1px 1px #c4cde0; border-radius:5px; float:left;}
+.topmid em { font-style:normal; padding:30px 0 0 30px; text-transform:uppercase; padding:30px ; float:left;}
+
+.midbox { background:#f2f4f8; border:solid 1px #d7ddea; border-radius:5px; color:#727a89; padding:30px; margin:22px 0; font-size:20px;  float:left; width:940px;}
+.midbox em { width:780px; float:left; font-style:normal;}
+.midbox .get { float:right; background:#ff9000; text-align:center; font:bold 22px Arial, Helvetica, sans-serif; padding:8px; border-radius:5px; padding:0px 15x; color:#fff; box-shadow: 1px 1px 1px #c4cde0;}
+.midbox .get a { color:#fff;}
+
+.webapps { color:#535a69;margin:10px 0; float:left;}
+.webapps h2 { display:block; font:normal 22px Arial, Helvetica, sans-serif;}
+.app { width:300px; padding:12px 12px 30px 12px; float:left; border-radius:5px;  border:solid 1px #c4cde0; background:#fff; color:#3a3a3a; position:relative;  }
+.app a {color:#3a3a3a;}
+.app strong { text-transform:uppercase; display:block; font-size:20px; padding:10px 0; font-weight:normal;}
+.mar { margin:0 10px;}
+.fb { border:none; background:none; border-radius:0px; padding:0 12px;}
+.arrow { position:absolute; bottom:0; right:10px; border-color:transparent transparent #f89b1d transparent ;
+  border-style: solid;
+  border-width: 25px;}
+  .blue {border-color:transparent transparent #15b6e9 transparent }
+  .green {border-color:transparent transparent #9bcc4e transparent }
+  
+  
+  footer { background:#bdc3ce; float:left; width:100%; margin:15px 0 0 0;} 
+    footer .foot { width:1000px; margin:0 auto; color:#747c8a; border-top:solid 1px #b9bcc2; padding:20px 0 40px 0; }
+   footer .foot ul { float:left; width:400px;}
+    footer .foot a {color:#747c8a;} 
+	 footer .foot ul li { float:left;}
+	 footer .foot ul li a{ float:left; padding: 0 5px ;}
+	  footer .foot span { float:right; width:500px; text-align:right;}
+	  .pullleft { float:left;}
+	  .pullright { float:right;}
+	  
+	  .ficon { background:url(media/images/home/sprite.png) -271px -130px no-repeat; width:70px; height:70px; float:right; }
+	

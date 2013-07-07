@@ -1,0 +1,9 @@
+<script type="text/javascript" src="{{MEDIA_URL}}/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#payment_form').submit();
+	});
+</script> 
+<form method="post" action={{form.form_action}} id="payment_form">
+    {{form.as_p}}
+</form>
