@@ -50,8 +50,8 @@
 
 <section class="homemid">
 <div class="topmid">
-	<img src="{{app_banner.bigImg}}" width="1000" height="262" alt="">
-	<em>{{ app_banner.title }} </em>
+	<a href='{% url app_description app_banner.id %}'><img src="{{MEDIA_URL}}{{app_banner.bigImg}}" width="1000" height="262" alt="">
+	<em>{{ app_banner.title }} </em></a>
 </div>
 <div class="midbox">
 <em>{{ app_banner.text }}</em>
@@ -65,7 +65,7 @@
 	<h2>Web Apps</h2>
 	{%for app in web_apps %}
 	<div class="app">
-		<a target="_blank" href="#"><img src="{{ app.homeImg }}" width="295" height="220" alt=""><strong>{{ app.title }}</strong></a> 
+		<a target="_blank" href="#"><img src="{{MEDIA_URL}}{{ app.homeImg }}" width="295" height="220" alt=""><strong>{{ app.title }}</strong></a> 
 	 	{{ app.text }}
 	 	<span class="arrow green"></span>
 	</div>
@@ -89,9 +89,10 @@
 
 </div>
 
+<br/>
+<div class="fb-like" data-href="http://apps.digiqom.com/" data-send="true" data-width="350" data-show-faces="false"></div>
 
-
-
+{%comment%}
 <div class="webapps">
 
 <h2>Mobile Apps</h2>
@@ -105,11 +106,13 @@
 {% endfor %}
 
 
+
+
 <!--<span class="pullleft"><img src="images/like.gif" width="346" height="32" alt=""></span>-->
 <div class="ficon"> 
 <span> <a href="#"></a></span><span><a href="#"></a></span>
 </div>
-
+{%endcomment%}
 </section>
 
 <footer>

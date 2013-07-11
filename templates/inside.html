@@ -24,8 +24,17 @@
 
 
 
-
 <body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <header><span class="logo"> <a href="#"></a></span>
 
 <div class="right">
@@ -44,7 +53,7 @@
 
 <section class="homemid">
 <article class="description">
-  <img src="{{MEDIA_URL}}{{app.dcrptnImg}}" width="646" height="385" alt="" align="left"> 
+  <a href='#'><img src="{{MEDIA_URL}}{{app.dcrptnImg}}" width="646" height="385" alt="" align="left"></a> 
   
   <aside class="pullright">
   
@@ -72,9 +81,15 @@
 <h2>Web Apps</h2>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
+  	{%if app.optnlImg1%}
     <td align="center"><img src="{{MEDIA_URL}}{{app.optnlImg1}}" width="270" height="347" alt=""></td>
+    {%endif%}
+    {%if app.optnlImg1%}
     <td align="center"><img src="{{MEDIA_URL}}{{app.optnlImg2}}" width="270" height="347" alt=""></td>
+    {%endif%}
+    {%if app.optnlImg1%}
     <td align="center"><img src="{{MEDIA_URL}}{{app.optnlImg3}}" width="270" height="347" alt=""></td>
+    {%endif%}
   </tr>
   </table>
 
@@ -87,7 +102,10 @@
 <img src="{{MEDIA_URL}}image/home/social.gif" width="1005" height="292" alt="">
 </div>
 <div class="order"><a href="#">ORDER NOW</a></div>
-<span class="pullleft"><img src="{{MEDIA_URL}}image/home/like.gif" width="346" height="32" alt=""></span>
+<span class="pullleft">
+
+<div class="fb-like" data-href="http://apps.digiqom.com/appstore/{{app.id}}/" data-send="true" data-width="350" data-show-faces="false"></div>
+</span>
 <div class="ficon"> 
 <span> <a href="#"></a></span><span><a href="#"></a></span>
 </div>

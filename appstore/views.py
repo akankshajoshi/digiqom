@@ -30,16 +30,16 @@ def home_page(request):
 
 def app_description(request, appId):
     if request.method == 'GET':
-        app = AppFactory.objects.filter(id=1)[0]
+        app = AppFactory.objects.filter(id=appId)[0]
         return render_to_response('inside.html', {'app':app}, context_instance=RequestContext(request))
-    else:
-        if form.is_valid():
-            import pdb;pdb.set_trace();
-            form = form.save(commit=False)
-            app = AppFactory.objects.filter(id=appId)
-            if app:
-                form.app = app[0]
-                form.save()
-                return render_to_response('index.html', {'form':form, 'done':'done'}, context_instance=RequestContext(request))
-        else:
-            return render_to_response('index.html', {'form':form, 'done':'app not exist'}, context_instance=RequestContext(request))
+#     else:
+#         if form.is_valid():
+#             import pdb;pdb.set_trace();
+#             form = form.save(commit=False)
+#             app = AppFactory.objects.filter(id=appId)
+#             if app:
+#                 form.app = app[0]
+#                 form.save()
+#                 return render_to_response('index.html', {'form':form, 'done':'done'}, context_instance=RequestContext(request))
+#         else:
+#             return render_to_response('index.html', {'form':form, 'done':'app not exist'}, context_instance=RequestContext(request))

@@ -71,7 +71,7 @@ header nav ul li.home a {width:19px; height:13px; display:block;}
 
 .webapps { color:#535a69;margin:10px 0; float:left;}
 .webapps h2 { display:block; font:normal 22px Arial, Helvetica, sans-serif;}
-.app { width:300px; padding:12px 12px 30px 12px; float:left; border-radius:5px;  border:solid 1px #c4cde0; background:#fff; color:#3a3a3a; position:relative;  }
+.app { width:300px; padding:12px 12px 30px 12px; float:left; border-radius:5px;margin-right:10px ; border:solid 1px #c4cde0; background:#fff; color:#3a3a3a; position:relative;  }
 .app a {color:#3a3a3a;}
 .app strong { text-transform:uppercase; display:block; font-size:20px; padding:10px 0; font-weight:normal;}
 .mar { margin:0 10px;}
