@@ -1,15 +1,17 @@
 {% include 'header.html' %}
 
 <section class="homemid">
+{%comment%}
 <div class="topmid">
 	<a target="_blank" href='{% url app_description app_banner.id %}'><img src="{{MEDIA_URL}}{{app_banner.bigImg}}" width="1000" height="262" alt="">
 	<em>{{ app_banner.title }} </em></a>
 </div>
+{%endcomment%}
 <div class="midbox">
 <em>{{ app_banner.text }}</em>
-
+{%comment%}
 <span class="get"><a target="_blank" href="{% url app_description app_banner.id %}">Get Started</a></span>
-
+{%endcomment%}
 </div>
 
 <div class="webapps">
