@@ -1,15 +1,17 @@
 {% include 'header.html' %}
 
 <section class="homemid">
+{%comment%}
 <div class="topmid">
-	<a target="_blank" href='{% url app_description app_banner.id %}'><img src="{{MEDIA_URL}}{{app_banner.bigImg}}" width="1000" height="262" alt="">
+	<a href='{% url app_description app_banner.id %}'><img src="{{MEDIA_URL}}{{app_banner.bigImg}}" width="1000" height="262" alt="">
 	<em>{{ app_banner.title }} </em></a>
 </div>
+{%endcomment%}
 <div class="midbox">
 <em>{{ app_banner.text }}</em>
-
-<span class="get"><a target="_blank" href="{% url app_description app_banner.id %}">Get Started</a></span>
-
+{%comment%}
+<span class="get"><a href="{% url app_description app_banner.id %}">Get Started</a></span>
+{%endcomment%}
 </div>
 
 <div class="webapps">
@@ -17,7 +19,7 @@
 	<h2>Web Apps</h2>
 	{%for app in web_apps %}
 	<div class="app">
-		<a target="_blank" href='{% url app_description app_banner.id %}'><img src="{{MEDIA_URL}}{{ app.homeImg }}" width="295" height="220" alt=""><strong>{{ app.title }}</strong></a> 
+		<a href='{% url app_description app.id %}'><img src="{{MEDIA_URL}}{{ app.homeImg }}" width="295" height="220" alt=""><strong>{{ app.title }}</strong></a> 
 	 	{{ app.text }}
 	 	<span class="arrow green"></span>
 	</div>
