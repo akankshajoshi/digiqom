@@ -1,4 +1,4 @@
-{%include header.html%}
+{% include 'header.html' %}
 
 <section class="homemid">
 <div class="topmid">
@@ -8,7 +8,7 @@
 <div class="midbox">
 <em>{{ app_banner.text }}</em>
 
-<span class="get"><a target="_blank" href="http://apps.facebook.com/leadonfacebook">Get Started</a></span>
+<span class="get"><a target="_blank" href="{% url app_description app_banner.id %}">Get Started</a></span>
 
 </div>
 
@@ -52,13 +52,7 @@
 {%endcomment%}
 </section>
 
-<footer>
-<div class="foot"><ul>
-  <li><a href="#">Know more about Digiqom</a> |</li>   
-  <li><a href="#">Portfolio</a> |</li><li> <a href="#">Pricing</a> |</li><li><a href="#">Contact</a></li></ul><span> 2013  Copyright Digiqom  </span>
-
-</div>
-</footer>
+{% include 'footer.html' %}
 
 </body>
 </html>
