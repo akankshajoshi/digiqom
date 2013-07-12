@@ -3,7 +3,7 @@ from models import AppFactory, UserInfo, TransactionDetails, Banner,\
     HomePageText
 
 class AppFactoryAdmin(admin.ModelAdmin):
-    fields = ('title', 'text', 'appType','clickUrl', 'dummyUrl','homeImg','dcrptnImg','optnlImg1','optnlImg2','optnlImg3')
+    fields = ('title', 'text', 'subtext','appType','clickUrl', 'dummyUrl','homeImg','dcrptnImg','optnlImg1','optnlImg2','optnlImg3')
     list_display = ('title', 'clickUrl', 'dummyUrl')    
 
 class UserInfoAdmin(admin.ModelAdmin):

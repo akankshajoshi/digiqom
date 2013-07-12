@@ -23,10 +23,8 @@ from django.template import RequestContext
         
     
 def home_page(request):
-    app_banner = AppFactory.objects.filter(isBigBanner=True)[0]
-    web_apps = AppFactory.objects.filter(isBigBanner=False, appType=1)
-    mob_apps = AppFactory.objects.filter(isBigBanner=False, appType=2)
-    return render_to_response('index.html', {'web_apps':web_apps, 'app_banner':app_banner, 'mob_apps':mob_apps}, context_instance=RequestContext(request))
+    web_apps = AppFactory.objects.filter(appType=1)
+    return render_to_response('index.html', {'web_apps':web_apps}, context_instance=RequestContext(request))
 
 def app_description(request, appId):
     if request.method == 'GET':
