@@ -6,8 +6,9 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
+    url(r'^$', 'digiqom.appstore.views.home_page'),
     url(r'^appstore/(?P<appId>(\d+))/$', 'digiqom.appstore.views.app_description', name='app_description'),
-    url(r'^$', 'digiqom.appstore.views.home_page', name='app_description'),
+    url(r'^userinfo/(?P<appId>(\d+))/$', 'digiqom.appstore.views.submit_userinfo',name='submit_user'),
 #     url(r'^appstore/', include('digiqom.appstore.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

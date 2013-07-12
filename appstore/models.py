@@ -25,6 +25,9 @@ class Banner(models.Model):
 
 class HomePageText(models.Model):
     text = models.TextField()
+    
+    def __unicode__(self):
+        return self.text
  
 class UserInfo(models.Model):
     name = models.CharField(max_length=250)

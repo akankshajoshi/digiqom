@@ -8,7 +8,7 @@
 </div>
 {%endcomment%}
 <div class="midbox">
-<em>{{ app_banner.text }}</em>
+<em>{{ hometext }}</em>
 {%comment%}
 <span class="get"><a href="{% url app_description app_banner.id %}">Get Started</a></span>
 {%endcomment%}
@@ -20,7 +20,7 @@
 	{%for app in web_apps %}
 	<div class="app">
 		<a href='{% url app_description app.id %}'><img src="{{MEDIA_URL}}{{ app.homeImg }}" width="295" height="220" alt=""><strong>{{ app.title }}</strong></a> 
-	 	{{ app.text }}
+	 	{{ app.subtext }}
 	 	<span class="arrow green"></span>
 	</div>
 	{% endfor %}
