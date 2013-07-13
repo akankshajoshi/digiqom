@@ -3,6 +3,7 @@
 <section class="homemid">
 
 <div class="topmid">
+
 <ul class="bxslider">
 	<li><img src="{{MEDIA_URL}}image/appstore/saple1.jpg" width="1000" height="262" alt=""></li>
 	<li><img src="{{MEDIA_URL}}image/appstore/saple1.jpg" width="1000" height="262" alt=""></li>
@@ -12,9 +13,9 @@
 </div>
 
 <div class="midbox">
-<em>{{ app_banner.text }}</em>
+<em>{{ hometext }}</em>
 {%comment%}
-<span class="get"><a target="_blank" href="{% url app_description app_banner.id %}">Get Started</a></span>
+<span class="get"><a href="{% url app_description app_banner.id %}">Get Started</a></span>
 {%endcomment%}
 </div>
 
@@ -23,8 +24,8 @@
 	<h2>Web Apps</h2>
 	{%for app in web_apps %}
 	<div class="app">
-		<a target="_blank" href='{% url app_description app_banner.id %}'><img src="{{MEDIA_URL}}{{ app.homeImg }}" width="295" height="220" alt=""><strong>{{ app.title }}</strong></a> 
-	 	{{ app.text }}
+		<a href='{% url app_description app.id %}'><img src="{{MEDIA_URL}}{{ app.homeImg }}" width="295" height="220" alt=""><strong>{{ app.title }}</strong></a> 
+	 	{{ app.subtext }}
 	 	<span class="arrow green"></span>
 	</div>
 	{% endfor %}
