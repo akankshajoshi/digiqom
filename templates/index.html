@@ -1,12 +1,16 @@
 {% include 'header.html' %}
 
 <section class="homemid">
-{%comment%}
+
 <div class="topmid">
-	<a target="_blank" href='{% url app_description app_banner.id %}'><img src="{{MEDIA_URL}}{{app_banner.bigImg}}" width="1000" height="262" alt="">
-	<em>{{ app_banner.title }} </em></a>
+<ul class="bxslider">
+	<li><img src="{{MEDIA_URL}}image/appstore/saple1.jpg" width="1000" height="262" alt=""></li>
+	<li><img src="{{MEDIA_URL}}image/appstore/saple1.jpg" width="1000" height="262" alt=""></li>
+	<li><img src="{{MEDIA_URL}}image/appstore/saple1.jpg" width="1000" height="262" alt=""></li>
+	<li><img src="{{MEDIA_URL}}image/appstore/saple1.jpg" width="1000" height="262" alt=""></li>
+	</ul>
 </div>
-{%endcomment%}
+
 <div class="midbox">
 <em>{{ app_banner.text }}</em>
 {%comment%}
@@ -55,6 +59,15 @@
 </section>
 
 {% include 'footer.html' %}
-
+<script type="text/javascript" src="{{MEDIA_URL}}script/jquery.1.8.3.min.js"></script>
+<script type="text/javascript" src="{{MEDIA_URL}}script/jquery.bxslider.js"></script>
+<script type="text/javascript" >
+$('.bxslider').bxSlider({
+  auto: true,
+  autoControls: true,
+	infiniteLoop:true,
+speed:800
+});
+</script>
 </body>
 </html>

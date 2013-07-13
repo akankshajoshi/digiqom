@@ -131,3 +131,8 @@ background: linear-gradient(to bottom, #00b7e9 1%,#00a0c6 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7e9', endColorstr='#00a0c6',GradientType=0 ); /* IE6-9 */; border-radius:5px; text-transform:uppercase; text-align:center; color:#fff; width:200px; padding:10px; margin:20px auto; clear:both; font:bold 20px Arial, Helvetica, sans-serif; }
 
 .order a { color:#fff; text-decoration:none;}
+.bx-wrapper{margin:0 auto}
+.bx-wrapper .bx-viewport{border:0px;box-shadow:none;left:0px}
+.topmid{border:0px;background:#fff}
+.bx-pager,.bx-controls-auto{display:none}
+
