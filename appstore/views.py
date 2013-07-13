@@ -2,7 +2,7 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from forms import UserInfoForm
-from models import UserInfo, TransactionDetails, AppFactory, HomePageText
+from models import AppFactory, HomePageText, Banner
 
 def submit_userinfo(request, appId):
     if request.method == 'GET':
@@ -24,7 +24,8 @@ def submit_userinfo(request, appId):
 def home_page(request):
     hometext = HomePageText.objects.all()[0]
     web_apps = AppFactory.objects.filter(appType=1)
-    return render_to_response('index.html', {'web_apps':web_apps, 'hometext':hometext}, context_instance=RequestContext(request))
+    banners = Banner.objects.all()
+    return render_to_response('index.html', {'web_apps':web_apps, 'hometext':hometext,'banners':banners}, context_instance=RequestContext(request))
 
 def app_description(request, appId):
     if request.method == 'GET':

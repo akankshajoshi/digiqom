@@ -3,13 +3,13 @@
 <section class="homemid">
 
 <div class="topmid">
-
-<ul class="bxslider">
-	<li><img src="{{MEDIA_URL}}image/appstore/saple1.jpg" width="1000" height="262" alt=""></li>
-	<li><img src="{{MEDIA_URL}}image/appstore/saple1.jpg" width="1000" height="262" alt=""></li>
-	<li><img src="{{MEDIA_URL}}image/appstore/saple1.jpg" width="1000" height="262" alt=""></li>
-	<li><img src="{{MEDIA_URL}}image/appstore/saple1.jpg" width="1000" height="262" alt=""></li>
+{% if banners %}
+	<ul class="bxslider">
+    	{% for banner in  banners %}
+			<li><img src="{{MEDIA_URL}}{{ banner.image }}" width="1000" height="262" alt=""></li>
+		{% endfor %}
 	</ul>
+{% endif %}
 </div>
 
 <div class="midbox">
