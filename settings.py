@@ -121,6 +121,7 @@ INSTALLED_APPS = (
     'ccavenue',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'microsite',
 )
 
 # A sample logging configuration. The only tangible logging
